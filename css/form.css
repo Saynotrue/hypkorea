@@ -1,0 +1,174 @@
+@charset "utf-8";
+
+.form-inner .input-box {
+    position:relative;
+    padding-left:18%;
+}
+.form-inner .input-box h3 {
+    font-size:1.2rem; 
+    position:absolute; top:50%; left:0;
+    transform:translate(0,-50%);
+}
+.form-inner .input-box:nth-of-type(1) h3 {
+    top:0;
+    transform:translate(0,0);
+}
+.form-inner .input-box input[type="radio"] {
+    display:none;
+}
+.form-inner .ck label {
+    font-size:1rem; color:#5E5E5E;
+    position:relative;
+    padding-left:21px;
+    cursor:pointer;
+}
+.form-inner .ck label::after {
+    content:""; display:block;
+    width:14px; height:14px;
+    background:url(../img/check_off.svg) no-repeat;
+    background-size: contain;
+    position:absolute; top:50%; left:0;
+    transform:translate(0,-50%);
+}
+.form-inner .check input[type="radio"]:checked + label::after {
+    background-image: url(../img/check_on.svg);
+}
+.form-inner .ck .check {
+    float:left; width:33.3%;
+}
+.form-inner .ck .check:nth-of-type(n+4) {
+    margin-top:10px;
+}
+.form-inner .f-box .input-box:nth-of-type(2) {
+    margin-top:20px;
+}
+.form-inner .f-box .input-box:nth-of-type(n+3) {
+    margin-top:10px;
+}
+.form-inner .f-box .input-box input {
+    width:100%; height:35px;
+    border:1px solid #9E9E9E;
+    border-radius:5px;
+    padding-left:5px;
+    font-size:1.2rem;
+    outline:none;
+}
+.form-inner .f-box .submit {
+    margin-top:15px;
+}
+.form-inner .f-box .submit button {
+    width:145px; height:36px;
+    font-size:1.2rem; font-weight:700;
+    color:#fff;
+    background-color:#B4A37B;
+    text-indent:0;
+    margin:0 auto;
+    display:block;
+}
+.form-inner .f-box .select input {
+    width:calc(100% - 82px);
+    float:left;
+}
+.form-inner .f-box .select select {
+    width:82px; height:35px;
+    float:left;
+    outline:none;
+    border:1px solid #9E9E9E;
+    border-radius:5px;
+    font-weight:700;
+    padding-left:10px;
+    font-family:'S-Core';
+    color:#AFAFAF;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background:#fff url('../img/select_arrow.svg') no-repeat 90% 50%;
+    background-size:10px;
+}
+.form-inner .f-box .select select::-ms-expand {
+    display:none;
+}
+
+
+/* 가로 해상도 768 이상 */
+@media screen and (min-width:768px){
+    .form-inner .input-box {
+        padding-left:16%;
+    }
+    .form-inner .input-box h3 {
+        font-size:2rem; 
+    }
+    .form-inner .ck label {
+        font-size:1.8rem; 
+        padding-left:42px;
+    }
+    .form-inner .ck label::after {
+        width:28px; height:28px;
+    }
+    .form-inner .ck .check:nth-of-type(n+4) {
+        margin-top:22px;
+    }
+    .form-inner .f-box .input-box:nth-of-type(2) {
+        margin-top:40px;
+    }
+    .form-inner .f-box .input-box:nth-of-type(n+3) {
+        margin-top:20px;
+    }
+    .form-inner .f-box .input-box input {
+        width:100%; height:70px;
+        border-radius:10px;
+        padding-left:10px;
+        font-size:2.4rem;
+    }
+    .form-inner .f-box .submit {
+        margin-top:40px;
+    }
+    .form-inner .f-box .submit button {
+        width:290px; height:72px;
+        font-size:2rem;
+    }
+    .form-inner .f-box .select input {
+        width:calc(100% - 165px);
+    }
+    .form-inner .f-box .select select {
+        width:165px; height:70px;
+        border-radius:10px;
+        font-size:1.8rem; 
+        padding-left:30px;
+        background-size:20px;
+        background-position:80% 50%;
+    }
+}
+/* 가로 해상도 1024 이상 */
+@media screen and (min-width:1024px){
+    .form-inner .input-box {
+        padding-left:17.7%;
+    }
+    .form-inner .ck label {
+        padding-left:34px;
+    }
+    .form-inner .ck label::after {
+        width:23px; height:23px;
+    }
+    .form-inner .ck .check {
+        width:25%;
+    }
+    .form-inner .ck .check:nth-of-type(4) {
+        margin-top:0;
+    }
+    .form-inner .ck .check:nth-of-type(n+5) {
+        margin-top:20px;
+    }
+    .form-inner .f-box .input-box:nth-of-type(2) {
+        margin-top:28px;
+    }
+    .form-inner .f-box .input-box:nth-of-type(n+3) {
+        margin-top:23px;
+    }
+    .form-inner .f-box .select input {
+        width:calc(100% - 170px);
+    }
+    .form-inner .f-box .select select {
+        margin-left:5px;
+    }
+}
