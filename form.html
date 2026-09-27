@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body class="main">
     <header class="f-page">
         <div class="header-inner">
@@ -60,10 +62,12 @@
         </div>
         <!-- //header-inner -->
     </header>
-    
+
     <section class="page">
         <div class="section05">
-            <div class="icon-box"><h2>무료 상담문의</h2></div>
+            <div class="icon-box">
+                <h2>무료 상담문의</h2>
+            </div>
             <div class="tab-inner">
                 <div class="tab-menu clear">
                     <div class="title on">
@@ -181,16 +185,17 @@
         </div>
         <!-- //section05 -->
     </section>
-    
+
     <footer>
         <div class="footer-inner">
             <img src="img/footer_logo.svg" alt="푸터 로고">
             <div class="text-box">
-                <p><strong>(주)에이치와이피</strong> | <strong>대표</strong> 위종복 |<br class="br-360"> <strong>대표전화</strong> <a href="tel:031-756-0449">031- 756 - 0449</a></p>
-                <p><strong>본사</strong> 경기도 성남시 수정구 위례광장로 21-9,<br> 1806호 (창곡동, 위례우남역KCC웰츠타워)</p>
+                <p><strong>(주)에이치와이피</strong> | <strong>대표</strong> 위종복 |<br class="br-360"> <strong>대표전화</strong> <a
+                        href="tel:031-756-0449">031- 756 - 0449</a></p>
+                <p><strong>본사</strong> 경기도 성남시 수정구 위례광장로 82,<br> B110호</p>
             </div>
             <button type="button">TOP</button>
-<!--
+            <!--
             <div class="kakao">
                 <a href="#">
                     <img src="img/kakao_img.png" alt="카카오">
@@ -199,19 +204,19 @@
 -->
         </div>
     </footer>
-    
-    
+
+
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/common.js"></script>
     <script>
-        $('.section05 .tab-menu .title').click(function(){
+        $('.section05 .tab-menu .title').click(function () {
             var idx = $(this).index();
             $('.section05 .tab-menu .title').removeClass('on');
             $(this).addClass('on');
             $('.section05 .form-inner .f-box').hide();
             $('.section05 .form-inner .f-box').eq(idx).fadeIn();
         });
-        
+
         function formCheck() {
             // 사용하기 쉽도록 변수를 선언하여 담아주고,
             var check = document.forms[0].check.value;
@@ -220,9 +225,9 @@
             var phoneNumber = document.forms[0].phoneNumber.value;
             var address = document.forms[0].address.value;
 
-            if (check == null || check == "") { 
-                alert('고객구분을 체크해 주세요'); 
-                return false; 
+            if (check == null || check == "") {
+                alert('고객구분을 체크해 주세요');
+                return false;
             }
             if (name == null || name == "") { // null인지 비교한 뒤 
                 alert('이름을 입력하세요'); // 경고창을 띄우고 
@@ -244,19 +249,19 @@
                 document.forms[0].address.focus();
                 return false;
             }
-            
+
         }
-        
+
         function formCheck2() {
             var check2 = document.forms[1].check.value;
             var name2 = document.forms[1].name.value;
             var companyName2 = document.forms[1].companyName.value;
             var phoneNumber2 = document.forms[1].phoneNumber.value;
             var address2 = document.forms[1].address.value;
-            
-            if (check2 == null || check2 == "") { 
-                alert('고객구분을 체크해 주세요'); 
-                return false; 
+
+            if (check2 == null || check2 == "") {
+                alert('고객구분을 체크해 주세요');
+                return false;
             }
             if (name2 == null || name2 == "") { // null인지 비교한 뒤 
                 alert('이름을 입력하세요'); // 경고창을 띄우고 
@@ -281,4 +286,5 @@
         }
     </script>
 </body>
+
 </html>
